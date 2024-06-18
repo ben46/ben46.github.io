@@ -1,14 +1,6 @@
 # main text of home
 title: Charlie
-bio: 
-•Blockchain
-Entering the field in 2018, former head of BLEX (synthetic assets) smart contract development (from 0 to 1). Former Dodoex contract team development leader. Proficient in GMX, Chainlink Data Stream, well-versed in Geth source code. Skilled in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao. Co-builder of solana-cn.com.
-•Finance and Derivatives
-Quantitative engineers for two private equity funds, seasoned crypto short-term trading strategy developer, with mature practice in option BS model arbitrage.
-•Bot Development
-Developing public account and group chat bots.
-•Managing a technical team of 4 people.
-•English proficient for work communication, with experience in American enterprises.
+bio: Blockchain enthusiast and developer since 2018, former head of BLEX (synthetic assets) smart contract development and Dodoex contract team development leader. Skilled in GMX, Chainlink Data Stream, proficient in Geth source code, and experienced in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao and co-builder of solana-cn.com. Quantitative engineer in finance and derivatives, experienced in crypto short-term trading strategies and option BS model arbitrage. Bot developer for public accounts and group chats, with experience managing a technical team of 4. Proficient in English for work communication, with experience in American enterprises.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -48,19 +40,19 @@ linkedin: https://www.linkedin.com/in/%E5%8D%93%E6%BD%9C-%E5%91%A8-3560a9146/
 github: ben46
 email: ben02060846@gmail.com
 
-# authors:
-#   johndoe:
-#     name: Charlie
-#     bio: A Man who travels the world eating noodles
-#     external-image: false
-#     picture: assets/images/profile.jpg
-#     twitter: johndoe
-#   jamesfoster:
-#     name: James Foster
-#     bio: A Man who develops software with coffee
-#     external-image: false
-#     picture: assets/images/james.jpg
-#     twitter: jamesfoster
+authors:
+  johndoe:
+    name: Charlie
+    bio: A Man who travels the world eating noodles
+    external-image: false
+    picture: assets/images/profile.jpg
+    twitter: johndoe
+  jamesfoster:
+    name: James Foster
+    bio: A Man who develops software with coffee
+    external-image: false
+    picture: assets/images/james.jpg
+    twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
