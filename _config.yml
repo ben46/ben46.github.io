@@ -1,6 +1,6 @@
 # main text of home
 title: Charlie
-bio: Blockchain enthusiast and developer since 2018, former head of BLEX (synthetic assets) smart contract development and Dodoex contract team development leader. Skilled in GMX, Chainlink Data Stream, proficient in Geth source code, and experienced in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao and co-builder of solana-cn.com. Quantitative engineer in finance and derivatives, experienced in crypto short-term trading strategies and option BS model arbitrage. Bot developer for public accounts and group chats, with experience managing a technical team of 4. 
+bio: Blockchain enthusiast and developer since 2018, former head of BLEX (synthetic assets) smart contract development and Dodoex contract team development leader. Skilled in GMX, Chainlink Data Stream, proficient in Geth source code, and experienced in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao and co-builder of solana-cn.com. https://t.me/charlie66888
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -36,7 +36,7 @@ disqus:
 # facebook: myfacebook
 # twitter: mytwitter
 # instagram: myinstagram
-linkedin: https://www.linkedin.com/in/%E5%8D%93%E6%BD%9C-%E5%91%A8-3560a9146/
+linkedin: 卓潜-周-3560a9146
 github: ben46
 email: ben02060846@gmail.com
 
@@ -114,3 +114,13 @@ exclude:
     "FAQ.md",
     "vendor",
   ]
+
+
+collections:
+  category1:
+    output: true
+    permalink: /category1/:docker和scp常用命令
+
+  category2:
+    output: true
+    permalink: /category2/:docker和scp常用命令

@@ -2,6 +2,18 @@
 layout: page
 title: Blog
 ---
+
+{% for category in site.categories %}
+  <h2>{{ category[0] }}</h2> <!-- 显示分类名称 -->
+  <ul>
+    {% for post in category[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li> <!-- 显示文章标题和链接 -->
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<!-- 
+
 <section class="list">
 	{% if site.posts.size == 0 %}
 		<p class="text-center">Nothing published yet!</p>
@@ -14,4 +26,4 @@ title: Blog
 			{% endif %}
 		{% endfor %}
 	{% endif %}
-</section>
+</section> -->
