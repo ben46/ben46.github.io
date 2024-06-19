@@ -1,6 +1,6 @@
 # main text of home
 title: Charlie
-bio: Blockchain enthusiast and developer since 2018, former head of BLEX (synthetic assets) smart contract development and Dodoex contract team development leader. Skilled in GMX, Chainlink Data Stream, proficient in Geth source code, and experienced in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao and co-builder of solana-cn.com. https://t.me/charlie66888
+bio: Blockchain enthusiast and developer since 2018, former head of BLEX (synthetic assets) smart contract development and Dodoex contract team development leader. Skilled in GMX, Chainlink Data Stream, proficient in Geth source code, and experienced in Python/Solidity/Go/TS/JS/Rust/iOS/NodeJs/SubGraph. Member of DApp-Learning-Dao and co-builder of solana-cn.com. 
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -16,9 +16,9 @@ dark-theme: auto
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: true
-resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume: false
+# resume-external: true
+# resume-url: https://google.com/?q=my+resume
 
 url: https://ben46.github.io
 
@@ -63,7 +63,7 @@ width: normal
 projects: true
 
 # if you don't need "about" or "blog", comment them out below
-# about: true
+about: true
 blog: true
 
 # do you want to show the "read time" of the posts?
@@ -115,12 +115,3 @@ exclude:
     "vendor",
   ]
 
-
-collections:
-  category1:
-    output: true
-    permalink: /category1/:docker和scp常用命令
-
-  category2:
-    output: true
-    permalink: /category2/:docker和scp常用命令
