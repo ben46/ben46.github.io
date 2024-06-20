@@ -57,7 +57,7 @@ Cosmos-SDK
 * anchor
 
 ## Cosmos related tech stack:
-TODO
+* ignite
 
 <h2>Projects</h2>
 
