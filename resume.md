@@ -67,4 +67,5 @@ Cosmos-SDK
 	<li><a href="https://blex.io">BLEX website</a></li>
 	<li><a href="https://github.com/PotatoSwap-Finance/potato-smart-contracts-dev">Potatoswap github(close source)</a></li>
 	<li><a href="https://potatoswap.finance">Potatoswap website</a></li>
+	<li><a href="https://github.com/ben46/cosmos-blog">Cosmos-Blog-Blockchain github</a></li>
 </ul>
