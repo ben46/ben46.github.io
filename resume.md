@@ -69,4 +69,5 @@ Cosmos-SDK
 	<li><a href="https://potatoswap.finance">Potatoswap website</a></li>
 	<li><a href="https://github.com/ben46/cosmos-blog">Cosmos-Blog-Blockchain github</a></li>
 	<li><a href="https://github.com/ben46/cosmos-loan">Cosmos-Loan-Blockchain github</a></li>
+	<li><a href="https://github.com/ben46/cosmos-token-factory">cosmos-token-factory github</a></li>
 </ul>
