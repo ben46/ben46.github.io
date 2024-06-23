@@ -19,7 +19,7 @@ title: Consensus contracts - sequencing
 
 这个函数是在 PolygonZkEVMEtrog.sol 合约上调用的。
 
-Rollup 顺序器组件调用了 PolygonZkEVMEtrog.sol 合约上的 sequenceBatches 函数，这个函数继承自 PolygonRollupBaseEtrog.sol 合约。
+Rollup 排序器组件调用了 PolygonZkEVMEtrog.sol 合约上的 sequenceBatches 函数，这个函数继承自 PolygonRollupBaseEtrog.sol 合约。
 
 这个函数接收来自一个共识合约的 BatchData 结构体数组。每个结构体包含 L2 以太坊交易数据和一些强制状态信息。
 
