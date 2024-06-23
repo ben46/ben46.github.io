@@ -1,3 +1,7 @@
+---
+title: Consensus contracts - sequencing
+---
+
 # Consensus contracts - sequencing
 
 交易在系统中流动，通过两种合约调用用例之一进入智能合约环境：
@@ -11,7 +15,7 @@
 
 ![sdfsdf](https://docs.polygon.technology/img/cdk/high-level-architecture/sequencing-flow.png)
 
-# sequenceBatches(batches, maxSequenceTs, initSequenceBatch, l2Coinbase)¶
+### sequenceBatches(batches, maxSequenceTs, initSequenceBatch, l2Coinbase)¶
 
 这个函数是在 PolygonZkEVMEtrog.sol 合约上调用的。
 
@@ -57,7 +61,8 @@ onSequenceBatches(newSequencedBatches, newAccInputHash)
 2. 更新 totalSequencedBatches 存储变量。
 3. 更新 lastBatchSequenced，并为调用 sequenceBatches 的 Rollup 添加一个新的 SequencedBatchData 结构体。
 4. 通过更新 lastVerifiedBatch、batchNumToStateRoot[] 和 lastLocalExitRoot 状态
-# sequenceBatchesValidium(batches, l2Coinbase, dataAvailabilityMessage)¶
+
+### sequenceBatchesValidium(batches, l2Coinbase, dataAvailabilityMessage)¶
 
 这个功能是在 PolygonValidiumEtrog.sol 合约中调用的。
 
