@@ -11,7 +11,7 @@ title: 共识合约 - 验证
 这部分重点讲验证流程。
 
 下面的序列图显示了rollup堆栈和/或AggLayer调用rollup管理器上的verifyBatchesTrustedAggregator(...)函数的验证流程。
-
+![f](https://docs.polygon.technology/img/cdk/high-level-architecture/verification-flow.png)
 Polygon Solidity共识验证流程
 
 ### verifyBatchesTrustedAggregator(rollupID, pendingStateNum, initNumBatch, finalNewBatch, newLocalExitRoot, newStateRoot, beneficiary, proof)
