@@ -1,3 +1,6 @@
+---
+title: Bridging
+---
 # Bridging
 
 ![fdsf](https://docs.polygon.technology/img/cdk/high-level-architecture/bridging-class-diagram.png)
