@@ -1,5 +1,5 @@
 ---
-title: Consensus contracts - sequencing
+title: 5-Consensus contracts - sequencing
 ---
 
 # Consensus contracts - sequencing
