@@ -1,4 +1,9 @@
-# L1 合约部分
+---
+title: smart contract overview
+---
+# smart contract overview
+
+在节点级别，链堆栈通过智能合约调用将交易数据直接传输到L2和L1网络。系统使用二进制树结构存储状态，包括可验证的本地和全局退出根。
 
 ## 共识合约
 
