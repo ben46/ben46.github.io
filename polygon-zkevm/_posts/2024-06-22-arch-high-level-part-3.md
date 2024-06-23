@@ -1,3 +1,7 @@
+---
+title: 详细介绍合约的四大模块
+---
+
 # Consensus contracts
 
 以下合约管理共识机制。它们处理L1和L2网络之间的交易batch排序和验证。
@@ -15,7 +19,7 @@
 
 这个合约调用PolygonRollupManager.sol合约中的onSequenceBatches(...)函数。在成功排序后，通过sequenceBatchesValidium(...)调用触发验证机制。
 
-# Rollup manager¶
+# Rollup manager
 
 PolygonRollupManager.sol 这个合约主要管理rollup。它验证batch，还通过存储哈希序列的数据来创建和更新rollup堆栈，当有新batch到达时。
 
