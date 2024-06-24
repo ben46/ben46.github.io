@@ -30,7 +30,7 @@ L2本地退出树的根，通过调用getRollupExitRoot()这个方法，可以�
 ![sdf](https://docs.polygon.technology/img/cdk/high-level-architecture/l1-ethereum-exit-tree.png)
 # L1 info tree
 
-L1信息树存储在PolygonZkEVMGlobalExitRootV2.sol合约里，这个合约也被称作全局退出根管理器。
+L1信息树存储在PolygonZkEVMGlobalExitRootV2.sol合约里，这个合约也被称作`全局退出根管理器`。
 所有子树的退出根都汇集到L1信息树的叶子上，这个树包含了全局退出根（GER）。
 GER是所有树存储信息的指纹，代表了系统的全局状态。
 ![sdfsdf](https://docs.polygon.technology/img/cdk/high-level-architecture/l1-info-tree.png)
