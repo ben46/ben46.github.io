@@ -35,9 +35,15 @@ The main functions of the bridge are:
 
 ## Transaction flows in depth
 ### L1 to L2
-如果在L1上调用bridgeAsset或bridgeMessage通过了验证，桥合约会把一个退出叶子添加到L1退出树，并计算新的L1退出根。
+如果在L1上调用bridgeAsset或bridgeMessage通过了验证
 
-`L1全局退出根管理器`会把新的L1退出根添加到全局退出树，并计算全局退出根。
+**这里的验证**包括支付eth的amount和传入amount参数是否一致
+
+bridge合约会把一个`exit leaf`添加到`L1退出树`，并计算新的L1退出根, 并且调用`L1全局退出根管理器`
+
+`L1全局退出根管理器`会把新的`L1退出根`添加到`全局退出树`，并计算`全局退出根`
+
+**至此, 第一步结束.**
 
 `排序器`会从`L1全局退出根管理器`获取最新的全局退出根。
 
@@ -46,6 +52,7 @@ The main functions of the bridge are:
 调用claimAsset或claimMessage时，需要提供一个*默克尔证明*来*验证*全局退出根中的正确*退出叶子*。
 
 桥合约会根据全局退出根*验证*调用者的默克尔证明。如果证明有效，桥接过程成功；否则，交易失败。
+
 ### L2 to L1
 如果在 L2 上调用 bridgeAsset 或 bridgeMessage 通过验证，桥接合约会把一个退出叶子加到 L2 退出树，并计算新的 L2 退出根。
 
