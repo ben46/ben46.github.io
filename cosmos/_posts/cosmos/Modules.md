@@ -43,7 +43,7 @@ graph LR
   E2 --> E2d["module/"]
   E2 --> E2e["simulation/"]
   E2 --> E2f["spec/"]
-  E2 --> E2g["根目录文件"]
+  E --> E2g["根目录文件"]
 
   F --> F1["ABCIInfo API"]
   F --> F2["ResponseCheckTx"]
@@ -119,7 +119,6 @@ graph LR
   node_64 --> node_65
   E2g --> node_66
   node_66 --> node_67
-  E2b --> node_68
   node_2["它们包含存储布局或状态，\n以及状态转换函数（即消息方法）。"]
   node_1["定义了 Cosmos SDK 应用程序的大部分逻辑"]
   node_3["以便应用程序开发人员可以专注于其应用程序真正独特的方面。"]
@@ -164,7 +163,7 @@ graph LR
   node_46["该模块的模拟包定义了区块链模拟器应用程序所使用的函数（simapp）。"]
   node_47["模块的规范文档，概述了重要概念、状态存储结构以及消息和事件类型定义。"]
   node_48["abci.go"]
-  node_49["模块BeginBlocker和实现。仅当和/或需要定义时才EndBlocker需要此文件。BeginBlockerEndBlocker"]
+  node_49["模块BeginBlocker和实现。<br>仅当和/或需要定义时才EndBlocker需要此文件。BeginBlockerEndBlocker"]
   node_50["codec.go"]
   node_51["模块针对接口类型的注册方法。"]
   node_52["errors.go"]
@@ -183,7 +182,6 @@ graph LR
   node_65["模块的参数类型定义和相关方法。"]
   node_66["*.pb.go"]
   node_67["模块的类型定义由协议缓冲区生成，如相应的*.proto文件中所定义。"]
-  node_68["如果模块依赖于另一个模块的 Keeper，则exported/代码元素希望将 Keeper 作为接口契约接收，以避免直接依赖实现 Keeper 的模块。但是，这些接口契约可以定义对实现 Keeper 的模块进行操作的方法（或返回特定于该模块的类型）。\n\n定义的接口类型exported/使用规范类型，允许模块通过文件接收接口契约expected_keepers.go。此模式允许代码保持DRY （打开新窗口）并缓解了进口周期混乱。"]
 ```
 
 
