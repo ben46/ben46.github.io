@@ -1,8 +1,7 @@
- 
-分支存储（Branch Store）是一种存储设计模式，主要用于管理和维护数据状态的不同版本或者变体。其核心思想是在不直接修改主存储的情况下，创建一个或多个独立的存储分支，以便对数据进行实验性或临时的变更。这在以下几种场景中非常有用：
+# Multistore and Keepers
 
 ```mermaid
-graph LR 
+graph LR
     A[文章结构目录]  
     node_1["keeper"]
     node_2["storeKeys"]
@@ -13,9 +12,6 @@ graph LR
     A --> C[Store types]  
     C --> C1[KVStore and Multistore in the interchain] 
 
-
-     
-
     C --> C2[CacheMultistore]  
     C --> C3[Transient store]  
     C --> C4[Additional KVStore wrappers]  
@@ -25,8 +21,6 @@ graph LR
     B2 --> node_1
     B2 --> node_2
     B2 --> node_3
-    
-    
 ```
 
 ```mermaid
@@ -71,7 +65,17 @@ graph TD
     nodeeeM --> nodeeeO[BaseApp 中使用的默认 multistore]
 
 ```
-
+# CommitMultiStore
+```mermaid
+graph LR  
+    A[CommitMultiStore] --> B[Multistore]  
+    A --> C[Committer]  
+    B --> D[KVStore]  
+    B --> E[Substores]  
+    C --> F[Transaction Management]  
+    C --> G[State Management]
+```
+# CacheMultistore & TransientStore
 ```mermaid
 graph TD
     C2[CacheMultistore]  
@@ -106,6 +110,10 @@ graph TD
     
     
 ```
+
+分支存储（Branch Store）是一种存储设计模式，主要用于管理和维护数据状态的不同版本或者变体。其核心思想是在不直接修改主存储的情况下，创建一个或多个独立的存储分支，以便对数据进行实验性或临时的变更。这在以下几种场景中非常有用：
+
+# GasKV
 ```mermaid
 graph LR  
   node_16["自动gas消耗"]
@@ -127,6 +135,7 @@ graph LR
     node_22 --> node_23
 ```
 
+# traceKV
 
 ```mermaid
 graph LR  
@@ -145,6 +154,7 @@ graph LR
     C4b --> node_28
 
 ```
+# prefix store
 
 ```mermaid
 graph LR  
@@ -161,6 +171,7 @@ graph LR
     C4c --> node_32
     C4c --> node_33
 ```
+# AnteHandler
 
 ```mermaid
 graph LR  
@@ -180,6 +191,9 @@ D --> node_34
     D --> node_38
     D --> node_39
 ```
+
+# 总结
+
 
 ```mermaid
 graph LR  
