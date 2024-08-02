@@ -66,6 +66,8 @@ graph TD
 
 ```
 # CommitMultiStore
+`CommitMultiStore` 是 Cosmos SDK 中的一种 `Multistore` 实现，它带有一个提交器（committer）。这是 Cosmos SDK 中使用的主要多存储类型。`CommitMultiStore` 允许对多个 `KVStore` 进行管理，并在每个区块结束时提交状态变化。它的设计旨在确保在处理交易时能够有效地管理和维护应用程序的状态。
+
 ```mermaid
 graph LR  
     A[CommitMultiStore] --> B[Multistore]  
