@@ -335,3 +335,76 @@ flowchart TB
   node_17 --> node_18
 
 ```
+
+# block pooling stream
+```mermaid
+sequenceDiagram
+    participant BlockStream as PollingBlockStream
+    participant ChainStore as 区块链存储
+    participant Adapter as 适配器
+    participant Subgraph as 子图
+    
+    BlockStream->>ChainStore: 查询最新区块
+    ChainStore-->>BlockStream: 返回最新区块
+    BlockStream->>Adapter: 处理区块
+    Adapter-->>BlockStream: 返回处理结果
+    
+    alt 子图指针落后于链头指针
+        BlockStream->>Subgraph: 检查子图状态
+        Subgraph-->>BlockStream: 子图指针状态
+    
+        alt 子图指针不在主链上
+            BlockStream->>Subgraph: 获取父区块指针
+            Subgraph-->>BlockStream: 返回父区块指针
+            BlockStream->>Subgraph: 回退到父区块
+            Subgraph-->>BlockStream: 更新子图状态
+        else 子图指针在主链上
+            BlockStream->>BlockStream: 继续处理
+        end
+    else 子图指针在主链上
+        BlockStream->>BlockStream: 继续处理
+    end
+
+```
+
+```mermaid
+flowchart TD
+    A[查询最新区块] --> B{{子图指针落后于链头指针?}}
+    
+    B --|是|--> C[检查子图状态]
+    C --> D{{子图指针在主链上?}}
+    
+    D --|否|--> E[获取父区块指针]
+    E --> F[回退到父区块]
+    F --> G[更新子图状态]
+    
+    D --|是|--> H[继续处理]
+    
+    B --|否|--> H[继续处理]
+```
+# PollingBlockStream
+Reconciliation: 
+
+在数据流或数据库的上下文中，reconciliation 意味着确保不同数据源之间的信息一致。例如，合并来自不同来源的数据，以消除差异和不一致。
+
+yield:
+
+在这里，yield 表示从一个过程（区块流的对齐）中逐步产生输出（即区块），让系统处理这些区块。这个过程通常在异步编程中使用，以允许在计算中有序地发出结果，而不是一次性返回所有结果。
+
+```mermaid
+stateDiagram-v2
+    [*] --> BeginReconciliation
+
+    BeginReconciliation --> Reconciliation : start/restart
+    Reconciliation --> YieldingBlocks : poll ready ok, NextBlocks Blocks
+    YieldingBlocks --> YieldingBlocks : 消化每一个区块
+    Reconciliation --> Idle : poll ready ok,NextBlocks Done, completed
+    Reconciliation --> BeginReconciliation : poll ready ok,next blocks revert
+    Reconciliation --> RetryAfterDelay : Poll Ready error
+    YieldingBlocks --> BeginReconciliation : need reconciliation
+    RetryAfterDelay --> BeginReconciliation : Poll Ready
+    RetryAfterDelay --> RetryAfterDelay : poll pending
+    Idle --> BeginReconciliation : chain head update
+```
+
+
